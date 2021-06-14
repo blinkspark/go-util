@@ -17,8 +17,8 @@ func Ignore(any ...interface{}) {
 	log.Printf("ignoring %#+v\n", any)
 }
 
-// Exists is file exist
-func Exists(path string) bool {
+// PathExists is file exist
+func PathExists(path string) bool {
 	_, err := os.Lstat(path)
 	if err != nil {
 		if os.IsExist(err) {
